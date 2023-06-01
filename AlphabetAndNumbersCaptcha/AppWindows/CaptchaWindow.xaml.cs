@@ -48,7 +48,7 @@ namespace NumberCaptcha.AppWindows
         }
         private void RefreshCaptcha()
         {
-            NumbersCaptcha.Children.Clear();
+            SimbolsCaptcha.Children.Clear();
             for (int i =0; i< 10;  i++)
             {
                 TextBlock textBlock = new TextBlock();
@@ -57,7 +57,7 @@ namespace NumberCaptcha.AppWindows
                 textBlock.FontSize = random.Next(10,40);
                 Color color = Color.FromRgb((byte)random.Next(256), (byte)random.Next(256), (byte)random.Next(256));
                 textBlock.Foreground = new SolidColorBrush(color);
-                NumbersCaptcha.Children.Add(textBlock);
+                SimbolsCaptcha.Children.Add(textBlock);
             }
         }
         private void BLogin_Click(object sender, RoutedEventArgs e)
